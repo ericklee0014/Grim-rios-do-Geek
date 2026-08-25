@@ -1,0 +1,460 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #63318a, #45205f);
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    width: 100%;
+    min-height: 140px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 5%;
+    gap: 30px;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.robo {
+    font-size: 70px;
+}
+
+.logo h1 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+}
+
+.logo h1 span {
+    color: #aaa;
+}
+
+
+/* =========================
+   PESQUISA E LOGIN
+========================= */
+
+.topo {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.pesquisa {
+    width: 355px;
+    height: 58px;
+
+    background-color: #eeeeee;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 15px;
+}
+
+.pesquisa span {
+    font-size: 25px;
+    margin-right: 10px;
+    color: #555;
+}
+
+.pesquisa input {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 17px;
+}
+
+.login {
+    height: 58px;
+
+    padding: 0 25px;
+
+    border: none;
+    border-radius: 12px;
+
+    background-color: #eeeeee;
+    color: #777;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.login:hover {
+    background-color: white;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   INTRODUÇÃO
+========================= */
+
+.introducao {
+    text-align: center;
+    margin: 10px auto 0;
+    padding: 0 20px;
+}
+
+.introducao h2 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.introducao h2 strong {
+    color: #d76aff;
+}
+
+.introducao p {
+    max-width: 800px;
+    margin: 0 auto;
+
+    font-family: Georgia, serif;
+    font-size: 19px;
+    line-height: 1.5;
+
+    color: #eeeeee;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    width: min(900px, 90%);
+
+    margin: 40px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 370px);
+
+    justify-content: center;
+
+    gap: 50px 80px;
+}
+
+
+/* =========================
+   CARD BASE
+========================= */
+
+.card {
+    width: 370px;
+    min-height: 185px;
+
+    border-radius: 15px;
+
+    padding: 18px 25px;
+
+    position: relative;
+    overflow: hidden;
+
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================
+   CORES DOS CARDS
+========================= */
+
+.desenhos {
+    background: linear-gradient(
+        135deg,
+        #315bea,
+        #4357c9
+    );
+}
+
+.animes {
+    background: linear-gradient(
+        135deg,
+        #c943b5,
+        #df62bb
+    );
+}
+
+.marvel {
+    background: linear-gradient(
+        135deg,
+        #df2020,
+        #bd2929
+    );
+}
+
+.jogos {
+    background: linear-gradient(
+        135deg,
+        #21bfc7,
+        #41c9ca
+    );
+}
+
+
+/* =========================
+   CONTEÚDO DOS CARDS
+========================= */
+
+.icone {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.card h3 {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    width: 100%;
+
+    font-family: Georgia, serif;
+    font-size: 13px;
+    line-height: 1.4;
+
+    padding-right: 5px;
+}
+
+.card a {
+    position: absolute;
+
+    bottom: 17px;
+    left: 25px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 12px;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   BOTÃO NOVIDADES
+========================= */
+
+.novidades {
+    position: fixed;
+
+    right: 50px;
+    bottom: 45px;
+
+    width: 175px;
+    height: 68px;
+
+    border: none;
+    border-radius: 40px;
+
+    background: linear-gradient(
+        100deg,
+        #ffc34d,
+        #ff7517
+    );
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+
+    transition: transform 0.3s ease;
+}
+
+.novidades:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .topo {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .cards {
+        width: 90%;
+        grid-template-columns: repeat(2, minmax(280px, 370px));
+        gap: 30px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        height: auto;
+        padding: 20px;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .robo {
+        font-size: 55px;
+    }
+
+    .logo h1 {
+        font-size: 21px;
+    }
+
+    .topo {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .pesquisa {
+        width: min(90%, 355px);
+    }
+
+    .login {
+        width: 150px;
+    }
+
+    .introducao {
+        padding: 20px;
+    }
+
+    .introducao h2 {
+        font-size: 24px;
+    }
+
+    .introducao p {
+        font-size: 16px;
+    }
+
+    .cards {
+        width: 90%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 25px;
+
+        margin-bottom: 130px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 370px;
+    }
+}
+
+
+/* =========================
+   CELULARES PEQUENOS
+========================= */
+
+@media (max-width: 400px) {
+
+    .logo {
+        gap: 8px;
+    }
+
+    .robo {
+        font-size: 45px;
+    }
+
+    .logo h1 {
+        font-size: 18px;
+    }
+
+    .pesquisa {
+        width: 100%;
+    }
+
+    .card {
+        min-height: 185px;
+        padding: 18px 20px;
+    }
+
+    .card a {
+        left: 20px;
+    }
+
+    .novidades {
+        width: 150px;
+        height: 58px;
+
+        right: 15px;
+        bottom: 15px;
+
+        font-size: 15px;
+    }
+}
